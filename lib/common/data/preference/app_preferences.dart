@@ -96,7 +96,8 @@ class AppPreferences {
       case const (List<String>):
         return _prefs.getStringList(key) as T? ?? item.defaultValue;
       default:
-        return transform(T, _prefs.getString(key)) ?? item.defaultValue;
+        // return transform(T, _prefs.getString(key)) ?? item.defaultValue;
+        return item.defaultValue;
     }
   }
 
